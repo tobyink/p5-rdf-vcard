@@ -3,7 +3,7 @@ use warnings;
 
 use inc::Module::Install;
 
-my $dist = 'Example-Example';
+my $dist = 'RDF-vCard';
 my $fn   = "lib/$dist.pm"; $fn =~ s#-#/#g;
 
 name                $dist;
@@ -14,15 +14,13 @@ readme_from         $fn;
 author              'Toby Inkster <tobyink@cpan.org>';
 license             'perl';
 
-test_requires       'Test::More'         => '0.61';
-test_requires       'Module::Signature'  => '0.66';
-requires            'Carp'               => '1.00';
-requires            'DateTime'           => 0;
-requires            'RDF::Trine'         => '0.112';
-requires            'XML::LibXML'        => '1.60';
-requires            'URI'                => '1.30';
-
-# install_script 'fingerw';
+requires            'common::sense'       => 0;
+test_requires       'Module::Signature'   => '0.66';
+requires            'namespace::clean'    => 0;
+requires            'RDF::Trine'          => '0.130';
+requires            'RDF::TrineShortcuts' => '0.100';
+requires            'Scalar::Util'        => 0;
+test_requires       'Test::More'          => '0.61';
 
 resources(
 	'homepage'   => "http://search.cpan.org/dist/$dist/",
@@ -30,7 +28,7 @@ resources(
 	'bugtracker' => "http://rt.cpan.org/Dist/Display.html?Queue=$dist",
 	);
 
-keywords("Perl");
+keywords(qw(RDF Semantic Web SemWeb vCard Directory Contacts hCard));
 	
 write_doap_changes;
 write_doap_changes_xml;
