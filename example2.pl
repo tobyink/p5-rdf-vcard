@@ -1,7 +1,9 @@
 use lib "lib";
+use Data::Dumper;
 use RDF::TrineShortcuts;
 use HTML::Microformats;
 use RDF::vCard;
+use RDF::vCard::Importer;
 use JSON -convert_blessed_universally;
 
 my $html = <<'HTML';
@@ -35,7 +37,7 @@ my $model = rdf_parse(<<'MORE', type=>'turtle', model => $doc->model);
   <http://example.com/> a v:VCard ;
      v:fn "Example.Com LLC" ;
      v:org
-         [   v:organisation-name "Example.Com LLC" ;
+         [   v:organisation-name "Dewey, Cheatem and Howe" ;
              v:organisation-unit "Corporate Division"
          ] ;
 	  vx:category <http://example.net/taxo/Quux> , <http://example.net/taxo/Xyzzy> ;
@@ -60,12 +62,12 @@ my $model = rdf_parse(<<'MORE', type=>'turtle', model => $doc->model);
      v:logo <http://example.com/logo.png> .
 MORE
 
-#print rdf_string($model => 'rdfxml');
-#print "#######\n";
-
 my $exporter = RDF::vCard::Exporter->new;
 my @cards = $exporter->export_cards($model);
-foreach my $c (@cards)
-{
-	print $c;
-}
+my $cards = join "", @cards;
+
+my $importer = RDF::vCard::Importer->new;
+my @rv = $importer->import_string($cards);
+print $cards;
+print Dumper([ @rv ]);
+print rdf_string($importer => 'RDFXML');
