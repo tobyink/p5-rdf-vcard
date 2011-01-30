@@ -1,4 +1,5 @@
 use lib "lib";
+use lib "../HTML-Microformats/lib";
 use RDF::TrineShortcuts;
 use HTML::Microformats;
 use RDF::vCard;
@@ -12,7 +13,11 @@ my $html = <<'HTML';
 	<body>
 		<div class="vcard">
 			<h1><a href="/" class="fn url">Alice Jones</a></h1>
-			<p class="adr"><span class="locality">Lewes</span>, <span class="region">East Sussex</span></p>
+			<p class="adr">
+				<span class="locality">Lewes</span>,
+				<span class="region">East Sussex</span>
+				(<span class="geo">50.87363;0.01133</span>)
+			</p>
 			<div class="agent vcard">
 				<span class="role">Secretary</span>
 				<a class="fn email" href="mailto:bob@example.com">Bob Smith</a>
@@ -33,7 +38,7 @@ my $model = rdf_parse(<<'MORE', type=>'turtle', model => $doc->model);
 <http://example.net/taxo/Quux> rdf:value "Quux" .
 
   <http://example.com/> a v:VCard ;
-     v:fn "Example.Com LLC" ;
+     v:fn "Example.Com LLC"@en ;
      v:org
          [   v:organisation-name "Example.Com LLC" ;
              v:organisation-unit "Corporate Division"
@@ -53,7 +58,7 @@ my $model = rdf_parse(<<'MORE', type=>'turtle', model => $doc->model);
              v:longitude "55.45"
          ] ;
      v:tel
-         [ a v:Fax, v:Work ;
+         [ a v:Fax, v:Work , v:Pref ;
              rdf:value "+61 7 5555 0000"
          ] ; 
      v:email <mailto:info@example.com> ;
@@ -63,7 +68,7 @@ MORE
 #print rdf_string($model => 'rdfxml');
 #print "#######\n";
 
-my $exporter = RDF::vCard::Exporter->new;
+my $exporter = RDF::vCard::Exporter->new(vcard_version=>4);
 my @cards = $exporter->export_cards($model);
 foreach my $c (@cards)
 {

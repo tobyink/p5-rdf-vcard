@@ -10,7 +10,7 @@ use Text::vFile::asData;
 
 use namespace::clean;
 
-our $VERSION = '0.004';
+our $VERSION = '0.005';
 
 sub new
 {
