@@ -72,12 +72,13 @@ my:v_0-004
 my:v_0-005
 
 	a               :Version ;
-	dc:issued       "2011-01-31"^^xsd:date ;
+	dc:issued       "2011-01-30"^^xsd:date ;
 	:revision       "0.005"^^xsd:string ;
 	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-vCard-0.005.tar.gz> ;
 	dcs:changeset [
 		dcs:versus my:v_0-004 ;
 		dcs:item   [ rdfs:label "nvalue method on RDF::vCard::Line."@en ; a dcs:Addition ] ;
+		dcs:item   [ rdfs:label "Experimental vCard XML support."@en ; a dcs:Addition ] ;
 		dcs:item   [ rdfs:label "Partial vCard 4.0 support."@en ; a dcs:Addition ]
 		] .
 

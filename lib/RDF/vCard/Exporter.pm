@@ -97,7 +97,7 @@ sub export_card
 	$model = RDF::TrineShortcuts::rdf_parse($model)
 		unless blessed($model) && $model->isa('RDF::Trine::Model');
 	
-	my $card = RDF::vCard::Entity->new( profile=>'VCARD' );
+	my $card = RDF::vCard->new_entity( profile=>'VCARD' );
 	
 	my %categories;
 	my $triples = $model->get_statements($subject, undef, undef);

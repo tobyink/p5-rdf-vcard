@@ -89,7 +89,7 @@ sub process
 sub _process_card
 {
 	my ($self, $card) = @_;
-	my $C = RDF::vCard::Entity->new( profile => $card->{type} );
+	my $C = RDF::vCard->new_entity( profile => $card->{type} );
 	
 	while (my ($prop, $vals) = each %{ $card->{properties} })
 	{

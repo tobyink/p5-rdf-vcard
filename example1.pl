@@ -73,4 +73,8 @@ my @cards = $exporter->export_cards($model);
 foreach my $c (@cards)
 {
 	print $c;
+	print "\n";
+	print $c->to_xml;
+	print "\n";
+	print "\n";
 }
