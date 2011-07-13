@@ -11,6 +11,9 @@ SIGNATURE
 
 t/01basic.t
 
+script/vcard2rdf
+script/vcard2xml
+
 inc/Module/AutoInstall.pm
 inc/Module/Install/AutoInstall.pm
 inc/Module/Install/Base.pm
@@ -22,9 +25,9 @@ inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
 inc/Module/Install.pm
 inc/Module/Install/ReadmeFromPod.pm
+inc/Module/Install/Scripts.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
-inc/Test/Signature.pm
 
 lib/RDF/vCard/Entity.pm
 lib/RDF/vCard/Entity/WithXmlSupport.pm

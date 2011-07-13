@@ -33,11 +33,13 @@ resources(
 	);
 
 keywords(qw(RDF Semantic Web SemWeb vCard Directory Contacts hCard XML));
-	
+
+install_script 'vcard2rdf';
+install_script 'vcard2xml';
+
 write_doap_changes;
 write_doap_changes_xml;
 
-include 'Test::Signature';
 auto_install;
 WriteAll(
 	'meta' => 1,
