@@ -1,7 +1,7 @@
 package RDF::vCard::Entity::WithXmlSupport;
 
 use 5.008;
-use base qw'RDF::vCard::Entity';
+use parent qw'RDF::vCard::Entity';
 use common::sense;
 use constant NS => 'urn:ietf:params:xml:ns:vcard-4.0';
 
