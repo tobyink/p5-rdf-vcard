@@ -1,17 +1,17 @@
 package RDF::vCard::Importer;
 
 use 5.008;
-use common::sense;
+use strict;
 
 use Encode qw[];
-use RDF::TrineShortcuts ':all';
+use RDF::TrineX::Functions -shortcuts;
 use RDF::vCard::Entity;
 use RDF::vCard::Line;
 use Text::vFile::asData;
 
 use namespace::clean;
 
-our $VERSION = '0.008';
+our $VERSION = '0.009';
 
 sub new
 {

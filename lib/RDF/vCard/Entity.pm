@@ -1,10 +1,10 @@
 package RDF::vCard::Entity;
 
 use 5.008;
-use common::sense;
+use strict;
 
 use JSON qw[];
-use RDF::TrineShortcuts ':all';
+use RDF::TrineX::Functions -shortcuts;
 
 sub V    { return 'http://www.w3.org/2006/vcard/ns#' . shift; }
 sub VX   { return 'http://buzzword.org.uk/rdf/vcardx#' . shift; }
@@ -14,7 +14,7 @@ sub XSD  { return 'http://www.w3.org/2001/XMLSchema#' . shift; }
 use namespace::clean;
 
 use overload '""' => \&to_string;
-our $VERSION = '0.008';
+our $VERSION = '0.009';
 
 sub new
 {
