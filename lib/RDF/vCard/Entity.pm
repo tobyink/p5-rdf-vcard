@@ -353,7 +353,22 @@ Checks to see if a property's value matches a regular expression.
 
   print "In London\n" if $vcard->matches(ADR => /London/);
 
+=item * C<< add_component($thing) >>
+
+Adds a nested entity within this one. This method is unused for vCard, but
+is a hook for the benefit of L<RDF::iCalendar>.
+
+=item * C<< components >>
+
+Lists nested entities within this one.
+
 =back
+
+=begin private
+
+=item TO_JSON
+
+=end private
 
 =head1 SEE ALSO
 

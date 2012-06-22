@@ -650,6 +650,14 @@ As per C<export_cards> but exports just a single card.
 The subject provided must be an RDF::Trine::Node::Blank or
 RDF::Trine::Node::Resource of type v:VCard.
 
+=item * C<< is_v3 >>
+
+Returns true if this exporter is in vCard 3.0 mode.
+
+=item * C<< is_v4 >>
+
+Returns true if this exporter is in vCard 4.0 mode.
+
 =back
 
 =head2 RDF Input
