@@ -1,0 +1,35 @@
+@prefix :        <http://usefulinc.com/ns/doap#> .
+@prefix toby:    <http://tobyinkster.co.uk/#> .
+@prefix cpant:   <http://purl.org/NET/cpan-uri/terms#>.
+
+`RDF-vCard`
+	:shortdesc      "convert between RDF and vCard"@en ;
+	:programming-language  "Perl" ;
+	:homepage       <https://metacpan.org/release/RDF-vCard> ;
+	:download-page  <https://metacpan.org/release/RDF-vCard> ;
+	:bug-database   <http://rt.cpan.org/Dist/Display.html?Queue=RDF-vCard> ;
+	:repository     [ a :GitRepository ; :browse <https://github.com/tobyink/p5-rdf-vcard> ] ;
+	cpant:x_IRC     <irc://irc.perl.org/#perlrdf>;
+	:maintainer     cpan:TOBYINK ;
+	:developer      cpan:TOBYINK ;
+	:documenter     cpan:TOBYINK ;
+	:tester         cpan:TOBYINK ;
+	:created        "2011-01-05"^^xsd:date ;
+	:license        <http://dev.perl.org/licenses/> ;
+	:category 
+		[ label "RDF"@en ],
+		[ label "Semantic Web"@en ],
+		[ label "SemWeb"@en ],
+		[ label "vCard"@en ],
+		[ label "Directory"@en ],
+		[ label "Contacts"@en ],
+		[ label "hCard"@en ],
+		[ label "XML"@en ].
+
+cpan:TOBYINK
+	a               foaf:Person ;
+	foaf:name       "Toby Inkster" ;
+	foaf:homepage   <http://tobyinkster.co.uk/> ;
+	foaf:page       <https://metacpan.org/author/TOBYINK> ;
+	foaf:mbox       <mailto:tobyink@cpan.org> ;
+	owl:sameAs      toby:i .
