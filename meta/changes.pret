@@ -133,6 +133,7 @@ my:v_0-010
 `RDF-vCard 0.011 cpan:TOBYINK`
 	issued    2014-09-17;
 	changeset [
+		item "use warnings"^^Change;
 		item "Switch to Dist::Inkt."^^Packaging;
 		item "Add IRC link."^^Packaging;
 	].
