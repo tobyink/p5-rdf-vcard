@@ -1,0 +1,11 @@
+@prefix deps:  <http://ontologi.es/doap-deps#> .
+
+<http://purl.org/NET/cpan-uri/dist/RDF-vCard/project>
+	deps:runtime-requirement         [ deps:on "XML::LibXML 1.70"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "namespace::clean"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "RDF::Trine 0.135"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "RDF::TrineX::Functions"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "Text::vFile::asData 0.07"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "URI"^^deps:CpanId ];
+	deps:test-requirement            [ deps:on "Test::More 0.61"^^deps:CpanId ].
+
