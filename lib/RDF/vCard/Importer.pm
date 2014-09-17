@@ -2,6 +2,7 @@ package RDF::vCard::Importer;
 
 use 5.008;
 use strict;
+use warnings;
 
 use Encode qw[];
 use RDF::TrineX::Functions -shortcuts;

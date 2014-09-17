@@ -2,6 +2,8 @@ package RDF::vCard::Line;
 
 use 5.008;
 use strict;
+use warnings;
+no warnings qw(uninitialized);
 
 use Encode;
 use MIME::Base64;

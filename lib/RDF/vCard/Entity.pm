@@ -2,6 +2,7 @@ package RDF::vCard::Entity;
 
 use 5.008;
 use strict;
+use warnings;
 
 use JSON qw[];
 use RDF::TrineX::Functions

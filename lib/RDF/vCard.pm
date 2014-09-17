@@ -2,6 +2,7 @@ package RDF::vCard;
 
 use 5.008;
 use strict;
+use warnings;
 
 use RDF::vCard::Entity;
 use RDF::vCard::Exporter;

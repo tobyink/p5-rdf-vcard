@@ -2,6 +2,7 @@ package RDF::vCard::Exporter;
 
 use 5.008;
 use strict;
+use warnings;
 
 use MIME::Base64 qw[];
 use RDF::vCard::Entity;
