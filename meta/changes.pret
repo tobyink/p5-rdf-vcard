@@ -129,3 +129,10 @@ my:v_0-010
 		dcs:item   [ rdfs:label "Fix various small issues around RDF::TrineShortcuts -> RDF::TrineX::Functions switch."@en ; a dcs:Bugfix ]
 	].
 
+
+`RDF-vCard 0.011 cpan:TOBYINK`
+	issued    2014-09-17;
+	changeset [
+		item "Switch to Dist::Inkt."^^Packaging;
+	].
+

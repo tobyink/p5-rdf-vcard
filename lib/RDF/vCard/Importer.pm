@@ -11,7 +11,7 @@ use Text::vFile::asData;
 
 use namespace::clean;
 
-our $VERSION = '0.010';
+our $VERSION = '0.011';
 
 sub new
 {
